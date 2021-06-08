@@ -1,0 +1,63 @@
+Bubble Sort:
+1.	Origen: El bubble sort remonta sus orígenes al año 1956 donde fue referido por primera vez en el paper “Sorting on Electronic Computer Systems” bajo el nombre “sorting by exchange”, sin embargo la primera aparición bajo su actual nombre es atribuida a K. Iverson en su libro “A Programming Language” publicado en 1962. En cuanto a la motivación para su creación poco se puede decir, ya que este algoritmo es considerado más una fuente de problemas que de soluciones y es frecuentemente usado como un ejemplo de un algoritmo ineficiente.
+
+2.	Descripción formal del algoritmo: El bubble sort es un algoritmo de ordenamiento que consiste básicamente en ordenar un conjunto de N elementos presentados como un arreglo de N elementos que será recorrido N-1 veces, en donde por cada iteración completa, el mayor elemento del arreglo recorrido quedará con el mayor índice.
+Se resume en 3 pasos:
+1.	Se comienza con el primer elemento, y se compara con el elemento siguiente del arreglo.
+2.	Si el elemento siguiente es menor, estos se intercambian de posición.
+3.	De lo contrario se sigue con el siguiente elemento en el arreglo
+Complejidad Temporal: Promedio: O(N2) 
+			 	Peor caso: O(N2)
+Mejor caso: O(N), este sucederá sólo cuando la lista ya venga ordenada
+
+3.	Escenario destacable del algoritmo: Debido a su simplicidad, BubbleSort se usa a menudo para introducir el concepto de un algoritmo de clasificación. En los gráficos de computadora es popular por su capacidad de detectar un error muy pequeño (como el intercambio de solo dos elementos) en arreglos casi ordenados y arreglarlo con una complejidad lineal (2N). Por ejemplo, se usa en un algoritmo de relleno de polígonos, donde las líneas de delimitación se ordenan por su coordenada x en una línea de exploración específica (una línea paralela al eje x) y al aumentar y su orden cambia (se intercambian dos elementos) solo en las intersecciones de dos líneas.
+
+Insertion Sort:
+1.	Origen: Insertion Sort es una manera muy natural de ordenar para un ser humano, y puede usarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria. Debido a la simplicidad del ordenamiento no existe un autor o un origen del algoritmo.
+
+2.	Descripción formal del algoritmo: Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay k elementos ordenados de menor a mayor, se toma el elemento k+1 y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha) o cuando ya no se encuentran elementos (todos los elementos fueron desplazados y este es el más pequeño). En este punto se inserta el elemento k+1 debiendo desplazarse los demás elementos. 
+Complejidad Temporal: Promedio: O(N2) 
+			 Peor caso: O(N2)
+			Mejor caso: O(N)
+
+3.	Escenario destacable del algoritmo: Existen varias ventajas asociadas con el Insertion Sort, ya que, en primer lugar, es simple de implementar y es especialmente eficiente para conjuntos pequeños de datos o en conjuntos relativamente ordenados. Además solo necesita una cantidad constante de espacio de memoria para la operación completa y es más eficiente que un Bubble Sort o un Selection Sort. Sin embargo, este algoritmo es menos eficiente a medida que el conjunto de datos crece y en estos caso sería mejor valerse de un Heap Sort o un Quick Sort.
+
+Shell Sort:
+1.	Origen: El ordenamiento shell surge de un refinamiento del ordenamiento por inserción realizado por Donald Shell en 1959.
+Motivaciones para su creación: La ineficacia del ordenamiento por inserción, la cual se ve
+afectada dado que mueve los valores sólo una posición cada vez.
+
+2.	Descripción formal del algoritmo:El algoritmo Shell sort mejora el ordenamiento por inserción comparando elementos separados por un espacio de varias posiciones. Esto permite que un elemento haga "pasos más grandes" hacia su posición esperada. Los pasos múltiples sobre los datos se hacen con tamaños de espacio cada vez más pequeños. El último paso del Shell sort es un simple ordenamiento por inserción, pero para entonces, ya está garantizado que los datos del vector están casi ordenados. 
+Complejidad Temporal:  Promedio: Entre O(N) y O(N2) (dependiendo del largo del arreglo)
+			 	Peor caso: O (N * log2N)
+				Mejor caso: O (N * logN)
+
+3.	Escenario destacable del algoritmo: Shell sort destaca mucho más cuando se trabaja con arreglos de corto tamaño, ya que cuando hay más datos, la complejidad empeora puesto que se un número mayor de comparaciones por cada iteración (h)
+
+Heap Sort:
+1.	Origen: Heapsort fue inventado por J. W. J. Williams en 1964. Este fue también el nacimiento del montón, presentado ya por Williams como una estructura de datos útil por derecho propio. En el mismo año, R. W. Floyd publicó una versión mejorada que podría ordenar una matriz en el lugar, continuando su investigación anterior sobre el algoritmo de clasificación de árboles.
+
+2.	Descripción formal del algoritmo:Este algoritmo consiste en almacenar todos los
+elementos del vector a ordenar en un montículo (heap), y luego extraer el nodo que queda como nodo raíz del montículo (cima) en sucesivas iteraciones obteniendo el conjunto ordenado. Basa su funcionamiento en una propiedad de los montículos, por la cual, la cima contiene siempre el menor elemento (o el mayor, según se haya definido el montículo) de todos los almacenados en él. 
+Complejidad Temporal:  HeapSort tiene O(NlogN) de complejidad temporal para todos sus 		casos (Peor, mejor y en promedio)
+
+3.	Escenario destacable del algoritmo:La Heap Data Structure generalmente se enseña con Heapsort. El algoritmo Heapsort tiene usos limitados porque Quicksort es mejor en la práctica. Sin embargo, la heap data structure en sí se usa enormemente. Los siguientes son algunos usos distintos de Heapsort:
+	a)Colas de prioridad: Las colas de prioridad se pueden implementar de manera eficiente utilizando Binary Heap porque admite las operaciones insert (), delete () y extractmax (), disminución de clave () en tiempo O (logn). Binomoial Heap y Fibonacci Heap son variaciones de Binary Heap.
+	b)Estadísticas de pedidos: La Heap data structure se puede utilizar para encontrar eficientemente el k-ésimo elemento más pequeño (o más grande) en una matriz.
+
+Quick Sort:
+1.	Autor: Charles Antony Richard Hoare (conocido por Tony Hoare)
+Fecha de creación: Desarrollado en 1959 y publicado en 1961.
+Motivaciones para su creación: Quicksort fue desarrollado en 1959 por Tony Hoare mientras estudiaba en la Moscow State University. Durante su estadía en Moscú, Hoare trabajaba en un proyecto de traducción automática para el National Physical Laboratory, por consiguiente necesitaba clasificar las palabras de oraciones en ruso antes de buscarlas en un diccionario ruso-inglés que ya estaba ordenado en orden alfabético. Su motivación para la creación del algoritmo fue distinguir que Insertion Sort sería muy lento para el proceso de clasificación de palabras. 
+Organizaciones involucradas: La Moscow State University y el National Physical Laboratory.
+
+2.	Descripción formal del algoritmo: El Quicksort es un algoritmo de ordenamiento que consiste básicamente en dividir un conjunto de N elementos en 2 sub matrices: los elementos altos y bajos, de la misma forma se pueden ordenar recursivamente estas matrices.
+Esta se resume en 3 pasos:
+1.	Elegir un elemento llamado pivote.
+2.	Particionamiento: Ordene la matriz para que todos los elementos con valores menores que el pivote lleguen antes del pivote, mientras que todos los elementos con valores mayores que el pivote van después (los valores iguales pueden ir en cualquier dirección). Después de esta partición, el pivote está en su posición final.
+3.	Aplique los pasos anteriores recursivamente a las submatrices de elementos con valores bajos y separadamente a la de valores altos.
+
+Complejidad Temporal: Promedio: O(N log N)
+		Peor caso: O(N2)
+		Mejor caso: O(N log N)
+3.	Escenario destacable del algoritmo: Existen varias ventajas destacables de este algoritmo, Quicksort es uno de los algoritmos de ordenamiento más rápido en comparación a sus homónimos y también es uno de los más estables.

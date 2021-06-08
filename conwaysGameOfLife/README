@@ -1,0 +1,6 @@
+Supuestos:
+
+- Tamaño de la matriz igual a 10.
+
+- Considere las entradas con x, y ≥ 10 o x, y < 0 como celulas muertas.
+
